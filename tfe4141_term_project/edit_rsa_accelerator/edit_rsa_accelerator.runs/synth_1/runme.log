@@ -1,0 +1,1397 @@
+
+*** Running vivado
+    with args -log rsa_accelerator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rsa_accelerator.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source rsa_accelerator.tcl -notrace
+Command: synth_design -top rsa_accelerator -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7715 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1276.012 ; gain = 85.863 ; free physical = 1696 ; free virtual = 12434
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rsa_accelerator' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_accelerator.vhd:82]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'rsa_regio' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_regio.vhd:111]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_regio.vhd:304]
+INFO: [Synth 8-256] done synthesizing module 'rsa_regio' (1#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_regio.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgin' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_msgin.vhd:69]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgin' (2#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_msgin.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgout' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_msgout.vhd:61]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgout' (3#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_msgout.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'rsa_core' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_core.vhd:69]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter word_length bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'rsa_exp' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/rsa_exp.vhd:4' bound to instance 'RSA_CORE1' of component 'rsa_exp' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_core.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'rsa_exp' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/rsa_exp.vhd:18]
+	Parameter word_length bound to: 256 - type: integer 
+	Parameter word_length bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'FM_Mod_Mult' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:4' bound to instance 'MULT_MM' of component 'FM_Mod_Mult' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/rsa_exp.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'FM_Mod_Mult' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:17]
+	Parameter word_length bound to: 256 - type: integer 
+	Parameter n bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'LUT' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/LUT.vhd:5' bound to instance 'LUT1' of component 'LUT' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'LUT' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/LUT.vhd:17]
+	Parameter n bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'LUT' (4#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/LUT.vhd:17]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/reg.vhd:4' bound to instance 'C_REG' of component 'reg' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:158]
+INFO: [Synth 8-638] synthesizing module '\reg ' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/reg.vhd:14]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module '\reg ' (5#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/reg.vhd:14]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/reg.vhd:4' bound to instance 'S_REG' of component 'reg' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:169]
+	Parameter n bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'CSA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CSA.vhd:6' bound to instance 'CSA1' of component 'CSA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'CSA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CSA.vhd:15]
+	Parameter n bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'CSA' (6#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CSA.vhd:15]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'r_shift' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/r_shift.vhd:13' bound to instance 'R_SHIFT_S' of component 'r_shift' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'r_shift' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/r_shift.vhd:19]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'r_shift' (7#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/r_shift.vhd:19]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'r_shift' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/r_shift.vhd:13' bound to instance 'R_SHIFT_C' of component 'r_shift' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:196]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'mod_mult' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/mod_mult.vhd:5' bound to instance 'Loop_cont' of component 'mod_mult' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:202]
+INFO: [Synth 8-638] synthesizing module 'mod_mult' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/mod_mult.vhd:18]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/mod_mult.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'mod_mult' (8#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/mod_mult.vhd:18]
+	Parameter word_length bound to: 260 - type: integer 
+INFO: [Synth 8-3491] module 'CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:4' bound to instance 'CLA1' of component 'CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:18]
+	Parameter word_length bound to: 260 - type: integer 
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized1' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized1' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized3' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized3' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized5' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized5' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized7' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized7' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized9' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized9' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized11' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized11' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized13' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized13' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized15' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized15' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized17' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized17' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized19' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized19' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized21' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized21' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized23' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized23' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized25' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized25' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized27' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized27' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized29' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized29' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized31' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized31' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized33' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized33' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized35' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized35' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized37' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized37' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized39' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized39' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized41' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized41' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized43' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized43' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized45' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized45' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized47' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized47' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized49' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized49' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized51' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized51' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized53' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized53' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized55' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized55' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized57' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized57' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized59' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized59' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized61' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized61' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized63' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized63' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized65' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized65' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized67' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized67' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized69' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized69' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized71' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized71' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized73' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized73' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized75' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized75' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized77' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized77' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized79' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized79' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized81' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized81' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized83' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized83' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized85' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized85' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized87' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized87' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized89' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized89' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized91' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized91' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized93' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized93' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized95' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized95' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized97' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized97' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized99' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized99' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized101' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized101' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized103' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized103' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized105' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized105' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized107' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized107' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized109' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized109' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized111' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized111' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized113' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized113' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized115' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized115' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized117' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized117' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized119' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized119' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized121' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized121' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized123' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized123' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized125' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized125' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-3491] module 'CLA_258' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:13' bound to instance 'CLA_adder' of component 'CLA_258' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'CLA_258__parameterized127' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA_258__parameterized127' (9#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLA' (10#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLA_258_top.vhd:18]
+	Parameter word_length bound to: 260 - type: integer 
+INFO: [Synth 8-3491] module 'CLS' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:4' bound to instance 'CLS1' of component 'CLS' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'CLS' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:18]
+	Parameter word_length bound to: 260 - type: integer 
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized1' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized1' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized3' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized3' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized5' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized5' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized7' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized7' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized9' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized9' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized11' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized11' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized13' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized13' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized15' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized15' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized17' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized17' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized19' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized19' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized21' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized21' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized23' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized23' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized25' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized25' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized27' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized27' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized29' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized29' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized31' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized31' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized33' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized33' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized35' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized35' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized37' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized37' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized39' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized39' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized41' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized41' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized43' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized43' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-3491] module 'four_bit_CLA' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:13' bound to instance 'CLA_adder' of component 'four_bit_CLA' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:34]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized45' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized45' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized47' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized47' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized49' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized49' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized51' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized51' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized53' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized53' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized55' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized55' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized57' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized57' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized59' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized59' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized61' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized61' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized63' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized63' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized65' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized65' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized67' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized67' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized69' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized69' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized71' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized71' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized73' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized73' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized75' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized75' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized77' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized77' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized79' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized79' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized81' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized81' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized83' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized83' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized85' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized85' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized87' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized87' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized89' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized89' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized91' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized91' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized93' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized93' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized95' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized95' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized97' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized97' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized99' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized99' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized101' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized101' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized103' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized103' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized105' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized105' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized107' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized107' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized109' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized109' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized111' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized111' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized113' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized113' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized115' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized115' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized117' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized117' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized119' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized119' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized121' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized121' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized123' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized123' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized125' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized125' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'four_bit_CLA__parameterized127' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_CLA__parameterized127' (11#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/4bit_CLA.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'CLS' (12#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/CLS.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'FM_Mod_Mult' (13#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/FM_mod_mult_top.vhd:17]
+	Parameter word_length bound to: 256 - type: integer 
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'MUX' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/MUX.vhd:14]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MUX' (14#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/MUX.vhd:14]
+	Parameter N bound to: 256 - type: integer 
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'reg_N' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/reg_N.vhd:13]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg_N' (15#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/reg_N.vhd:13]
+	Parameter N bound to: 256 - type: integer 
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'PISO_Nto1' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/PISO_Nto1.vhd:15]
+	Parameter N bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PISO_Nto1' (16#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/PISO_Nto1.vhd:15]
+	Parameter word_length bound to: 256 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mod_exp_fsm' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/mod_exp_fsm.vhd:25]
+	Parameter word_length bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mod_exp_fsm' (17#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/mod_exp_fsm.vhd:25]
+	Parameter word_length bound to: 260 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_exp' (18#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/imports/hdl/rsa_exp.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'rsa_core' (19#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_core.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'rsa_accelerator' (20#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/rsa_accelerator/hdl/rsa_accelerator.vhd:82]
+WARNING: [Synth 8-3331] design r_shift has unconnected port x_in[0]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1367.637 ; gain = 177.488 ; free physical = 1659 ; free virtual = 12400
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1367.637 ; gain = 177.488 ; free physical = 1670 ; free virtual = 12412
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1375.641 ; gain = 185.492 ; free physical = 1670 ; free virtual = 12412
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-802] inferred FSM for state register 'pr_state_reg' in module 'mod_mult'
+INFO: [Synth 8-5544] ROM "dv" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'pr_state_reg' in module 'mod_exp_fsm'
+INFO: [Synth 8-5544] ROM "done_exp" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_MULT" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_e" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Data_ready" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   write |                               01 |                               01
+                     add |                               10 |                               10
+                  finish |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pr_state_reg' using encoding 'sequential' in module 'mod_mult'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                           000001 |                              000
+                 load_in |                           000010 |                              001
+                   waitt |                           000100 |                              010
+                    mult |                           001000 |                              011
+                  reload |                           010000 |                              100
+                    done |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pr_state_reg' using encoding 'one-hot' in module 'mod_exp_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1402.688 ; gain = 212.539 ; free physical = 1591 ; free virtual = 12333
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 3     
++---XORs : 
+	   3 Input    257 Bit         XORs := 2     
+	   2 Input      4 Bit         XORs := 780   
++---Registers : 
+	              257 Bit    Registers := 4     
+	              256 Bit    Registers := 4     
+	               32 Bit    Registers := 42    
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 5     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	  13 Input    257 Bit        Muxes := 2     
+	   4 Input    256 Bit        Muxes := 1     
+	   2 Input    256 Bit        Muxes := 7     
+	   2 Input     32 Bit        Muxes := 33    
+	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 4     
+	   6 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 3     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 8     
+	  35 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 9     
+	   6 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module rsa_regio 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 34    
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 33    
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+	  35 Input      1 Bit        Muxes := 1     
+Module rsa_msgin 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module rsa_msgout 
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   4 Input    256 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module LUT 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input    257 Bit        Muxes := 1     
+Module reg 
+Detailed RTL Component Info : 
++---Registers : 
+	              257 Bit    Registers := 1     
+Module CSA 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input    257 Bit         XORs := 1     
+Module mod_mult 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      9 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+Module CLA_258 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized5 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized7 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized9 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized11 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized13 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized15 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized17 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized19 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized21 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized23 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized25 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized27 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized29 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized31 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized33 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized35 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized37 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized39 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized41 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized43 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized45 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized47 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized49 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized51 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized53 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized55 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized57 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized59 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized61 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized63 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized65 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized67 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized69 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized71 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized73 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized75 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized77 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized79 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized81 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized83 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized85 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized87 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized89 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized91 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized93 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized95 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized97 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized99 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized101 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized103 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized105 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized107 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized109 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized111 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized113 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized115 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized117 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized119 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized121 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized123 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized125 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module CLA_258__parameterized127 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 2     
+Module four_bit_CLA 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized5 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized7 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized9 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized11 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized13 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized15 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized17 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized19 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized21 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized23 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized25 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized27 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized29 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized31 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized33 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized35 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized37 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized39 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized41 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized43 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized45 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized47 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized49 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized51 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized53 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized55 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized57 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized59 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized61 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized63 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized65 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized67 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized69 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized71 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized73 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized75 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized77 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized79 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized81 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized83 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized85 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized87 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized89 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized91 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized93 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized95 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized97 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized99 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized101 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized103 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized105 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized107 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized109 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized111 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized113 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized115 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized117 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized119 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized121 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized123 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized125 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module four_bit_CLA__parameterized127 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 3     
+Module FM_Mod_Mult 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 2     
+Module MUX 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+Module reg_N 
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+Module PISO_Nto1 
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module mod_exp_fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 4     
+	   6 Input      9 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_rsa_regio/aw_en_reg)
+INFO: [Synth 8-3886] merging instance 'u_rsa_regio/axi_rresp_reg[0]' (FDRE) to 'u_rsa_regio/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_rsa_regio/\axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'u_rsa_regio/axi_bresp_reg[0]' (FDRE) to 'u_rsa_regio/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_rsa_regio/\axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (aw_en_reg) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_awaddr_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_awaddr_reg[0]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_bresp_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[0]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_rresp_reg[1]) is unused and will be removed from module rsa_regio.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_rsa_core/\RSA_CORE1/MULT_MM /S_REG/\Q_i_reg[256] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_rsa_core/\RSA_CORE1/MULT_MC /S_REG/\Q_i_reg[256] )
+WARNING: [Synth 8-3332] Sequential element (Q_i_reg[256]) is unused and will be removed from module reg__137.
+WARNING: [Synth 8-3332] Sequential element (Q_i_reg[256]) is unused and will be removed from module reg__136.
+WARNING: [Synth 8-3332] Sequential element (Q_i_reg[256]) is unused and will be removed from module reg__135.
+WARNING: [Synth 8-3332] Sequential element (Q_i_reg[256]) is unused and will be removed from module reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:26 ; elapsed = 00:02:40 . Memory (MB): peak = 1648.227 ; gain = 458.078 ; free physical = 1406 ; free virtual = 12153
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:44 ; elapsed = 00:02:58 . Memory (MB): peak = 1648.227 ; gain = 458.078 ; free physical = 1403 ; free virtual = 12150
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:58 ; elapsed = 00:03:12 . Memory (MB): peak = 1723.242 ; gain = 533.094 ; free physical = 1394 ; free virtual = 12141
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:00 ; elapsed = 00:03:13 . Memory (MB): peak = 1723.242 ; gain = 533.094 ; free physical = 1394 ; free virtual = 12141
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:00 ; elapsed = 00:03:13 . Memory (MB): peak = 1723.242 ; gain = 533.094 ; free physical = 1394 ; free virtual = 12141
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:00 ; elapsed = 00:03:14 . Memory (MB): peak = 1723.242 ; gain = 533.094 ; free physical = 1393 ; free virtual = 12140
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:00 ; elapsed = 00:03:14 . Memory (MB): peak = 1723.242 ; gain = 533.094 ; free physical = 1393 ; free virtual = 12140
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:01 ; elapsed = 00:03:14 . Memory (MB): peak = 1723.242 ; gain = 533.094 ; free physical = 1393 ; free virtual = 12140
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:01 ; elapsed = 00:03:14 . Memory (MB): peak = 1723.242 ; gain = 533.094 ; free physical = 1393 ; free virtual = 12140
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    88|
+|3     |LUT1   |     2|
+|4     |LUT2   |   614|
+|5     |LUT3   |  1817|
+|6     |LUT4   |   807|
+|7     |LUT5   |  1247|
+|8     |LUT6   |  4288|
+|9     |MUXF7  |   228|
+|10    |MUXF8  |    32|
+|11    |FDCE   |  2369|
+|12    |FDPE   |     1|
+|13    |FDRE   |  1099|
+|14    |FDSE   |    10|
+|15    |IBUF   |    90|
+|16    |OBUF   |    80|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------+--------------+------+
+|      |Instance          |Module        |Cells |
++------+------------------+--------------+------+
+|1     |top               |              | 12773|
+|2     |  u_rsa_core      |rsa_core      |  9455|
+|3     |    RSA_CORE1     |rsa_exp       |  9455|
+|4     |      EXP_FSM     |mod_exp_fsm   |   340|
+|5     |      E_SHIFT     |PISO_Nto1     |   364|
+|6     |      MULT_MC     |FM_Mod_Mult   |  3204|
+|7     |        C_REG     |reg_3         |   662|
+|8     |        Loop_cont |mod_mult_4    |  1750|
+|9     |        S_REG     |reg_5         |   792|
+|10    |      MULT_MM     |FM_Mod_Mult_0 |  3409|
+|11    |        C_REG     |\reg          |   672|
+|12    |        Loop_cont |mod_mult      |  1947|
+|13    |        S_REG     |reg_2         |   790|
+|14    |      REG_C       |reg_N         |   374|
+|15    |      REG_P       |reg_N_1       |  1293|
+|16    |  u_rsa_msgin     |rsa_msgin     |   276|
+|17    |  u_rsa_msgout    |rsa_msgout    |   520|
+|18    |  u_rsa_regio     |rsa_regio     |  2351|
++------+------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:01 ; elapsed = 00:03:14 . Memory (MB): peak = 1723.242 ; gain = 533.094 ; free physical = 1393 ; free virtual = 12140
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 33 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:01 ; elapsed = 00:03:15 . Memory (MB): peak = 1723.242 ; gain = 533.094 ; free physical = 1392 ; free virtual = 12139
+Synthesis Optimization Complete : Time (s): cpu = 00:03:01 ; elapsed = 00:03:15 . Memory (MB): peak = 1723.250 ; gain = 533.094 ; free physical = 1392 ; free virtual = 12139
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 438 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+427 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:06 ; elapsed = 00:03:18 . Memory (MB): peak = 1779.270 ; gain = 600.711 ; free physical = 1386 ; free virtual = 12133
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/rsa_accelerator.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file rsa_accelerator_utilization_synth.rpt -pb rsa_accelerator_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1803.281 ; gain = 0.000 ; free physical = 1381 ; free virtual = 12130
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 24 11:49:17 2018...

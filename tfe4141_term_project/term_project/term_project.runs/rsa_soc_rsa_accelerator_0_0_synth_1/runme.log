@@ -1,0 +1,386 @@
+
+*** Running vivado
+    with args -log rsa_soc_rsa_accelerator_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rsa_soc_rsa_accelerator_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source rsa_soc_rsa_accelerator_0_0.tcl -notrace
+Command: synth_design -top rsa_soc_rsa_accelerator_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12203 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1305.754 ; gain = 82.863 ; free physical = 897 ; free virtual = 10009
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rsa_soc_rsa_accelerator_0_0' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ip/rsa_soc_rsa_accelerator_0_0/synth/rsa_soc_rsa_accelerator_0_0.vhd:92]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'rsa_accelerator' declared at '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_accelerator.vhd:16' bound to instance 'U0' of component 'rsa_accelerator' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ip/rsa_soc_rsa_accelerator_0_0/synth/rsa_soc_rsa_accelerator_0_0.vhd:184]
+INFO: [Synth 8-638] synthesizing module 'rsa_accelerator' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_accelerator.vhd:82]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'rsa_regio' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_regio.vhd:111]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_regio.vhd:304]
+INFO: [Synth 8-256] done synthesizing module 'rsa_regio' (1#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_regio.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgin' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_msgin.vhd:69]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgin' (2#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_msgin.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgout' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_msgout.vhd:61]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgout' (3#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_msgout.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'rsa_core' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_core.vhd:69]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter word_length bound to: 256 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'RSA_CORE1' of component 'rsa_exp' [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_core.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'rsa_core' (4#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_core.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'rsa_accelerator' (5#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ipshared/10e4/hdl/rsa_accelerator.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'rsa_soc_rsa_accelerator_0_0' (6#1) [/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ip/rsa_soc_rsa_accelerator_0_0/synth/rsa_soc_rsa_accelerator_0_0.vhd:92]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1358.379 ; gain = 135.488 ; free physical = 880 ; free virtual = 10000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1358.379 ; gain = 135.488 ; free physical = 875 ; free virtual = 9995
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1358.379 ; gain = 135.488 ; free physical = 875 ; free virtual = 9995
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.31 . Memory (MB): peak = 1735.410 ; gain = 3.000 ; free physical = 440 ; free virtual = 9564
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 516 ; free virtual = 9640
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 516 ; free virtual = 9640
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:46 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 518 ; free virtual = 9643
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:47 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 475 ; free virtual = 9615
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+	               32 Bit    Registers := 42    
+	                8 Bit    Registers := 5     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   4 Input    256 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 33    
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+	  35 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module rsa_regio 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 34    
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 33    
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+	  35 Input      1 Bit        Muxes := 1     
+Module rsa_msgin 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module rsa_msgout 
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   4 Input    256 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3917] design rsa_soc_rsa_accelerator_0_0 has port m00_axis_tstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design rsa_soc_rsa_accelerator_0_0 has port m00_axis_tstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design rsa_soc_rsa_accelerator_0_0 has port m00_axis_tstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design rsa_soc_rsa_accelerator_0_0 has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design rsa_soc_rsa_accelerator_0_0 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design rsa_soc_rsa_accelerator_0_0 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design rsa_soc_rsa_accelerator_0_0 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design rsa_soc_rsa_accelerator_0_0 has unconnected port s00_axis_tstrb[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/u_rsa_regio /aw_en_reg)
+INFO: [Synth 8-3886] merging instance 'U0/u_rsa_regio/axi_rresp_reg[0]' (FDRE) to 'U0/u_rsa_regio/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/u_rsa_regio /\axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/u_rsa_regio/axi_bresp_reg[0]' (FDRE) to 'U0/u_rsa_regio/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/u_rsa_regio /\axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (aw_en_reg) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_awaddr_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_awaddr_reg[0]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_bresp_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[0]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_rresp_reg[1]) is unused and will be removed from module rsa_regio.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:51 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 547 ; free virtual = 9704
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:01:07 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1216 ; free virtual = 10343
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1197 ; free virtual = 10324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1183 ; free virtual = 10309
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1158 ; free virtual = 10285
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1159 ; free virtual = 10286
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1158 ; free virtual = 10285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1158 ; free virtual = 10284
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1156 ; free virtual = 10283
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1156 ; free virtual = 10283
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |rsa_exp       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |rsa_exp_bbox_0 |     1|
+|2     |LUT1           |     1|
+|3     |LUT2           |    41|
+|4     |LUT3           |     5|
+|5     |LUT4           |    10|
+|6     |LUT5           |    50|
+|7     |LUT6           |   682|
+|8     |MUXF7          |   160|
+|9     |FDCE           |   542|
+|10    |FDRE           |  1099|
+|11    |FDSE           |    10|
++------+---------------+------+
+
+Report Instance Areas: 
++------+-----------------+----------------+------+
+|      |Instance         |Module          |Cells |
++------+-----------------+----------------+------+
+|1     |top              |                |  2858|
+|2     |  U0             |rsa_accelerator |  2858|
+|3     |    u_rsa_core   |rsa_core        |   291|
+|4     |    u_rsa_msgin  |rsa_msgin       |   280|
+|5     |    u_rsa_msgout |rsa_msgout      |   523|
+|6     |    u_rsa_regio  |rsa_regio       |  1761|
++------+-----------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1156 ; free virtual = 10283
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 1735.410 ; gain = 135.488 ; free physical = 1209 ; free virtual = 10336
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1735.410 ; gain = 512.520 ; free physical = 1209 ; free virtual = 10336
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 160 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:01:11 . Memory (MB): peak = 1735.410 ; gain = 524.109 ; free physical = 1199 ; free virtual = 10326
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.runs/rsa_soc_rsa_accelerator_0_0_synth_1/rsa_soc_rsa_accelerator_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.srcs/sources_1/bd/rsa_soc/ip/rsa_soc_rsa_accelerator_0_0/rsa_soc_rsa_accelerator_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/term_project/term_project.runs/rsa_soc_rsa_accelerator_0_0_synth_1/rsa_soc_rsa_accelerator_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file rsa_soc_rsa_accelerator_0_0_utilization_synth.rpt -pb rsa_soc_rsa_accelerator_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1759.422 ; gain = 0.000 ; free physical = 1195 ; free virtual = 10323
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 24 13:29:51 2018...

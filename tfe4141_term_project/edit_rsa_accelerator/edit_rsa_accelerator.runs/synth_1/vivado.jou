@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Nov 24 11:45:48 2018
+# Process ID: 7707
+# Current directory: /home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1
+# Command line: vivado -log rsa_accelerator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rsa_accelerator.tcl
+# Log file: /home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/rsa_accelerator.vds
+# Journal file: /home/gabor7669/Desktop/TFE4141/tfe4141_term_project_integration_kit_v2/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source rsa_accelerator.tcl -notrace
